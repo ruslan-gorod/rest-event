@@ -27,6 +27,7 @@ public class Event {
     @Column(name = "speaker")
     private String speaker;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "eventType")
     private EventType eventType;
 

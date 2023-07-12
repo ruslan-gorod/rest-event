@@ -1,9 +1,9 @@
 package com.epam.dto;
 
+import com.epam.model.EventType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.epam.model.EventType;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.time.LocalDateTime;

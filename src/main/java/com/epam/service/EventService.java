@@ -15,5 +15,6 @@ public interface EventService {
     EventDto deleteEvent(Long id);
 
     List<EventDto> getAllEvents();
+
     List<EventDto> getAllEventsByTitle(String title);
 }
