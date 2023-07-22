@@ -1,6 +1,6 @@
-package com.epam.controller;
+package com.epam.conf.exeption;
 
-import com.epam.dto.ErrorDto;
+import com.epam.v1.dto.ErrorDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.ServletRequestBindingException;

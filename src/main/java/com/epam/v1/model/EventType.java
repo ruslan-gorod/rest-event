@@ -1,4 +1,4 @@
-package com.epam.model;
+package com.epam.v1.model;
 
 
 public enum EventType {

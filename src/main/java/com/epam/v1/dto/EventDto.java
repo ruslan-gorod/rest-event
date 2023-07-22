@@ -1,6 +1,6 @@
-package com.epam.dto;
+package com.epam.v1.dto;
 
-import com.epam.model.EventType;
+import com.epam.v1.model.EventType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

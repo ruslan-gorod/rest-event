@@ -1,4 +1,4 @@
-package com.epam.dto;
+package com.epam.v1.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

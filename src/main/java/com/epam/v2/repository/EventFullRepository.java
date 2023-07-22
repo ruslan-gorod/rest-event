@@ -1,7 +1,7 @@
-package com.epam.repository;
+package com.epam.v2.repository;
 
-import com.epam.dto.EventDto;
-import com.epam.model.Event;
+import com.epam.v2.dto.EventFullDto;
+import com.epam.v2.model.EventFull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EventRepository extends JpaRepository<Event, Long> {
+public interface EventFullRepository extends JpaRepository<EventFull, Long> {
 
     @Query("SELECT e FROM Event e WHERE e.title = ?1")
-    List<EventDto> findByTitle(String title);
+    List<EventFullDto> findByTitle(String title);
 }

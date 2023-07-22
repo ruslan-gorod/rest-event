@@ -1,7 +1,7 @@
-package com.epam.controller;
+package com.epam.v1.controller;
 
-import com.epam.dto.EventDto;
-import com.epam.impl.EventServiceImpl;
+import com.epam.v1.dto.EventDto;
+import com.epam.v1.impl.EventServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/event")
+@RequestMapping("api/v1/event")
 public class EventServiceController {
 
     @Autowired

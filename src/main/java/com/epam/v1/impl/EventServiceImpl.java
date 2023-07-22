@@ -1,9 +1,9 @@
-package com.epam.impl;
+package com.epam.v1.impl;
 
-import com.epam.dto.EventDto;
-import com.epam.model.Event;
-import com.epam.repository.EventRepository;
-import com.epam.service.EventService;
+import com.epam.v1.dto.EventDto;
+import com.epam.v1.model.Event;
+import com.epam.v1.repository.EventRepository;
+import com.epam.v1.service.EventService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class EventServiceImpl implements EventService {
+public class EventServiceImpl implements EventService<EventDto> {
 
     private static final String EVENT_NOT_FOUND = "Event not found";
 
