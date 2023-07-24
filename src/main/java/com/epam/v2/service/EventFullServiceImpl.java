@@ -7,6 +7,7 @@ import com.epam.v2.model.EventFull;
 import com.epam.v2.populator.EventPopulator;
 import com.epam.v2.repository.EventFullRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,8 +18,9 @@ import java.util.stream.Collectors;
 public class EventFullServiceImpl implements EventService<EventFullDto> {
 
     private static final String EVENT_NOT_FOUND = "Event not found";
-    private EventConverter converter;
-    private EventPopulator populator;
+    private final EventConverter converter = new EventConverter();
+    private final EventPopulator populator = new EventPopulator();
+    @Autowired
     private EventFullRepository repository;
 
     @Override
@@ -53,7 +55,7 @@ public class EventFullServiceImpl implements EventService<EventFullDto> {
     @Override
     public List<EventFullDto> getAllEvents() {
         return repository.findAll().stream()
-                .map(eventFull -> converter.convertToDto(eventFull))
+                .map(converter::convertToDto)
                 .collect(Collectors.toList());
     }
 

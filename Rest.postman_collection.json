@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "6639c0f9-ee84-4aeb-9093-f89649356d39",
+		"name": "Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7898924"
+	},
+	"item": [
+		{
+			"name": "All events 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/event/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All events 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v2/event/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"event",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New event 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"first\",\r\n    \"place\":\"79000, Lviv, Rivna, 10\",\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\":\"WORKSHOP\",\r\n    \"dateTime\":\"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/event/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update 1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"first updated\",\r\n    \"place\":\"79000, Lviv, Rivna, 10\",\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\":\"WORKSHOP\",\r\n    \"dateTime\":\"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/event/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update 2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"first updated\",\r\n    \"place\": {\r\n        \"zipCode\": 79005,\r\n        \"city\": \"Lviv\",\r\n        \"street\": \"Rivna\",\r\n        \"building\": 101\r\n    },\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\":\"WORKSHOP\",\r\n    \"dateTime\":\"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/event/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"event",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"first\",\r\n    \"place\":\"79000, Lviv, Rivna, 10\",\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\":\"WORKSHOP\",\r\n    \"dateTime\":\"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/event/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"first\",\r\n    \"place\":\"79000, Lviv, Rivna, 10\",\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\":\"WORKSHOP\",\r\n    \"dateTime\":\"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/event/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"event",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get 1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"first\",\r\n    \"place\":\"79000, Lviv, Rivna, 10\",\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\":\"WORKSHOP\",\r\n    \"dateTime\":\"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/event/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"first\",\r\n    \"place\":\"79000, Lviv, Rivna, 10\",\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\":\"WORKSHOP\",\r\n    \"dateTime\":\"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/event/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"event",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New event 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"first\",\r\n    \"place\": {\r\n        \"zipCode\": 79000,\r\n        \"city\": \"Lviv\",\r\n        \"street\": \"Rivna\",\r\n        \"building\": 10\r\n    },\r\n    \"speaker\": \"Oleg\",\r\n    \"eventType\": \"WORKSHOP\",\r\n    \"dateTime\": \"2023-01-07T16:02:43.368Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/event/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"event",
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

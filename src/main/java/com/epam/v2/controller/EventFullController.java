@@ -3,6 +3,7 @@ package com.epam.v2.controller;
 import com.epam.v2.dto.EventFullDto;
 import com.epam.v2.service.EventFullServiceImpl;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,30 +22,31 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EventFullController {
 
-    private EventFullServiceImpl service;
+    @Autowired
+    private EventFullServiceImpl eventFullService;
 
     @GetMapping("/list")
     public ResponseEntity<List<EventFullDto>> getAllEvents() {
-        return new ResponseEntity<>(service.getAllEvents(), HttpStatus.OK);
+        return new ResponseEntity<>(eventFullService.getAllEvents(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<EventFullDto> getEventById(@PathVariable Long id) {
-        return new ResponseEntity<>(service.getEventById(id), HttpStatus.OK);
+        return new ResponseEntity<>(eventFullService.getEventById(id), HttpStatus.OK);
     }
 
     @PostMapping("/new")
     public ResponseEntity<EventFullDto> createEvent(@RequestBody EventFullDto EventFullDto) {
-        return new ResponseEntity<>(service.createEvent(EventFullDto), HttpStatus.CREATED);
+        return new ResponseEntity<>(eventFullService.createEvent(EventFullDto), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<EventFullDto> removeEvent(@PathVariable Long id) {
-        return new ResponseEntity<>(service.deleteEvent(id), HttpStatus.OK);
+        return new ResponseEntity<>(eventFullService.deleteEvent(id), HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<EventFullDto> updateEvent(@RequestBody EventFullDto event, @PathVariable Long id) {
-        return new ResponseEntity<>(service.updateEvent(id, event), HttpStatus.OK);
+        return new ResponseEntity<>(eventFullService.updateEvent(id, event), HttpStatus.OK);
     }
 }
